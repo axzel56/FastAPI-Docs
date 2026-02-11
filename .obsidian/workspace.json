@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basics/Sets.md",
+                "file": "FastAPI/SQL Alchemy.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sets"
+              "title": "SQL Alchemy"
             }
           },
           {
@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "fieldval",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -215,6 +215,8 @@
   },
   "active": "ff1afb686bc6a38e",
   "lastOpenFiles": [
+    "FastAPI/Dependency Injection.md",
+    "Basics/Sets.md",
     "Basics/Super().md",
     "Basics/uvicorn.md",
     "Basics/staticmethod.md",
@@ -225,7 +227,6 @@
     "Django/ViewSet.md",
     "Basics/Meta Class.md",
     "Basics/Dunder.md",
-    "FastAPI/Dependency Injection.md",
     "FastAPI/SQL Alchemy.md",
     "FastAPI/Typing.md",
     "Pydantic/Field.md",
@@ -241,7 +242,6 @@
     "FastAPI/Mixins.md",
     "FastAPI/Method Resolution Order(MRI).md",
     "FastAPI/asyncio.md",
-    "View.md",
     "0_lg8CUY8XaDBgTiMI.webp",
     "Computer Vision",
     "Design Patterns",

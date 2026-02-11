@@ -281,4 +281,65 @@ db.query(self.model).offset(skip).limit(limit).all()
 # select users, skip the first 10, then take the next 5
 ```
 - limit tells the db the max number of records to return in a single request.
-- 
+
+
+
+# SCALAR
+---
+
+## Key Points About `.scalar()`
+
+1. **Returns a single value** — the value of the **first column** in the **first row** of your result.
+    
+2. **Ignores all other columns and rows**.
+    
+3. **Returns `None`** if no rows are found.
+    
+
+---
+
+### Example:
+
+Suppose your model is:
+
+```python
+class OnboardingCountry(Base):
+	id = Column(Integer, primary_key=True)
+    name = Column(String)    
+    code = Column(String)
+```
+
+---
+
+#### Query 1: Multiple columns, first row
+
+```python
+result = self.db.query(OnboardingCountry.name, OnboardingCountry.code).first() print(result)   # ('ARUBA', 'AW')  → tuple
+```
+
+```python
+scalar_result = self.db.query(OnboardingCountry.name,
+OnboardingCountry.code).scalar() 
+print(scalar_result)   # 'ARUBA'  → only the **first column of the first row**
+```
+
+---
+
+#### Query 2: Single column
+
+`scalar_result = self.db.query(OnboardingCountry.name).filter(...).scalar() print(scalar_result)   # 'ARUBA'`
+
+---
+
+# 🔹 Summary
+
+- `.scalar()` = first column of the first row only
+    
+- If you select **multiple columns**, only the first column is returned
+    
+- If you want multiple columns, use `.first()` or `.all()` instead
+    
+
+---
+
+💡 **Tip:** `.scalar_one()` also exists — it does the same thing, **but raises an error if there’s not exactly one row**.
