@@ -13,3 +13,27 @@ async def main():
 		rows = await conn.fetch('SELECT id, name FROM users WHERE age > $1', 25)
 		
 ```
+
+
+### `async def` 
+
+It makes the function asynchronous.
+
+`async def get_weather(city)`
+
+This means:
+- The function returns a coroutine
+- Must call it with await
+- It can use `await` inside
+It does not manage resources.
+
+### `async with` 
+
+It Manages async resources safely
+`async with httpx.AsyncClient() as client:`
+
+It ensures:
+- Connections are opened properly.
+- Connections are closed properly.
+- Cleanup happens even if errors occur
+- Connection pooling works correctly

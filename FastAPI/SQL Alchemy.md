@@ -343,3 +343,23 @@ print(scalar_result)   # 'ARUBA'  → only the **first column of the first row**
 ---
 
 💡 **Tip:** `.scalar_one()` also exists — it does the same thing, **but raises an error if there’s not exactly one row**.
+
+
+# Lazy/Eager Loading
+
+```python
+
+# Unmapped Style
+class User(Base):
+	__tablename__ = "users"
+	name = Column(String)
+	posts = relationship("Post", backpopulates="user", lazy="select")
+	
+# Mapped Style
+class User(Base):
+	__tablename__ = "users"
+	name: Mapped[str]
+	posts: Mapped[list["Posts"]] = relationship(backref="user", lazy="select")
+```
+
+If `lazy` parameter is not specified, then it defaults to `select`.

@@ -205,3 +205,59 @@ obj = User(**user_data)
 # Python translates this internally to
 # obj = User(username = "alice", email="some@example.com")
 ```
+
+
+### filter() in Python
+
+The `filter()` function is used to filter elements from a sequence (like a list) based on a condition.
+
+Syntax:
+`filter(function, iterable)`
+
+- `function`: A function that returns `True` or `False` for each element.
+- `iterable`: The sequence to filter (list, tuple etc).
+- Returns a filter object, which can be converted to a list or tuple.
+
+```python
+numbers = [1,2,3,4,5,6]
+def is_even(n):
+	return n%2 == 0
+
+even_numbers = filter(is_even, numbers)
+print(list())
+```
+
+`enumerate()` is designed to give a counter (an index alongside the items like a numbered list.)
+- It does not know how to handle `lambda` function or filter data.
+- It expects a `list, string or tuple`
+
+`Note: enumerate(iterable, start=0)`
+
+
+### reduce()
+
+`reduce()` function is used to apply a function to the items of a sequence, reducing it to a single value.
+
+`reduce(function, iterable, initializer)`
+
+```python
+from functools import reduce
+
+numbers = [1,2,3,4,5]
+
+def add(x,y):
+	return x+y
+
+total = reduce(add, numbers)
+print(total) #15
+```
+
+Using Lamda
+
+`total  = reduce(lambda x,y : x + y, numbers)
+print(total)`
+
+|Function|Purpose|Output|
+|---|---|---|
+|`filter()`|Selects elements based on a condition|Filtered sequence (still iterable)|
+|`reduce()`|Combines elements to a **single result**|Single value|
