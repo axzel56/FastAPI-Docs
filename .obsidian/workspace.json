@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Basics/List-Sets-Dict-Tuple.md",
+                "file": "Pydantic/Field_validator.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "List-Sets-Dict-Tuple"
+              "title": "Field_validator"
             }
           },
           {
@@ -96,7 +96,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "lambda",
+                "query": "classmet",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -217,8 +217,9 @@
   },
   "active": "eb5b96affaabf28f",
   "lastOpenFiles": [
-    "Basics/Basics of Python.md",
+    "Basics/staticmethod.md",
     "Basics/List-Sets-Dict-Tuple.md",
+    "Basics/Basics of Python.md",
     "Django/Basics.md",
     "FastAPI/Schema.md",
     "FastAPI/SQL Alchemy.md",
@@ -238,7 +239,6 @@
     "Basics/Sets.md",
     "Basics/Super().md",
     "Basics/uvicorn.md",
-    "Basics/staticmethod.md",
     "Basics/SOLID.md",
     "Basics/Object Class.md",
     "Basics/Namespace.md",

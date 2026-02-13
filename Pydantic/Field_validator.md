@@ -61,3 +61,17 @@ Characteristic:
 - Can access :
 	- class attribute
 - Cannot directly access instance attributes
+
+# Real Backend Use Cases
+
+In real fintech/backend systems, `@classmethod` is used for:
+
+### 1️⃣ Creating objects from DB rows
+
+### 2️⃣ Creating objects from API payloads
+
+### 3️⃣ Factory methods
+
+### 4️⃣ Changing system-wide configuration
+
+### 5️⃣ ORM model utilities
