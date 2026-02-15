@@ -261,3 +261,21 @@ print(total)`
 |---|---|---|
 |`filter()`|Selects elements based on a condition|Filtered sequence (still iterable)|
 |`reduce()`|Combines elements to a **single result**|Single value|
+
+
+In Python, methods that change the data they belong to (like `.sort()`, `.append()`, or `.reverse()`) are designed to return `None`.
+By returning `None`, Python is explicitly telling you: _"Hey, I just changed the original object you gave me. I didn't make a copy!"_
+
+|**Feature**|**list.sort()**|**sorted(list)**|
+|---|---|---|
+|**Type**|Method (belongs to the list)|Built-in Function|
+|**Return Value**|`None`|**A new sorted list**|
+|**Can save to variable?**|No|Yes|
+|**Example**|`x.sort()`|`y = sorted(x)`|
+
+"Functions that mutate (change) an object should return `None` to avoid confusion."
+
+### 1. Actions that Change the Original (In-Place)
+
+These methods modify the list in your computer's memory and **return `None`** (except for `.pop()`).
+
