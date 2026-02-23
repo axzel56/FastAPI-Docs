@@ -49,8 +49,6 @@ When we call `MyClass()`. Python internal mechanism call
 `MyClass.__new__(cls, *args, **kwargs)` behind the scenes.
 
 
-
-
 ## Initialization
 
 
@@ -101,6 +99,17 @@ It receives values through its params and assign them to the class attributes.
 - When a module is imported: If a python file is imported as a module into another script, the `__name__` variable within the imported module is set to the name of the module itself
 
 
+### `__eq__` dunder
+
+The `__eq__` method in Python is a dunder that defines the behavior like the `is` operator checking if two variables references the exact same object in the memory.
+
+The `__eq__` method takes two arguments: `self` (left hand object) and `other` (right hand object). It should return True, if the objects are considered equal 
+False or `NotImplemented` if the comparison is not supported for the given types.
+
+```python
+class Point:
+	def __init__(self)
+```
 ## Context Managers
 
 A context manager is an object that can be used in a `with` block.

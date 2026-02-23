@@ -363,3 +363,31 @@ class User(Base):
 ```
 
 If `lazy` parameter is not specified, then it defaults to `select`.
+
+
+### `__table_args__`
+
+`__table_args__` attribute is used to provide additional positional and keyword arguments to the underlying `Table` constructor.
+
+Allows for the specifications of table-level configuration that are not defined by individual column declarations.
+
+#### Usage
+`__table_args__` can be defined as a tuple, a dictionary or a combination of both.
+
+- As a dictionary:
+```python
+class MyModel(Base):
+	__tablename__ = 'my_table'
+	__table_args__ = {'schema' : 'custom_schema', 'mysql_engine': 'InnoDB'}
+```
+
+We usually use it for:
+- Composite indexes
+- Unique constraints
+- Foreign Key constraints (multi-column)
+- Check constraints
+- Table-level settings (like schema, engine etc)
+
+
+- `concat: select(Patient.first_name + ' ' + Patient.last_name).label("full_name")`
+- 

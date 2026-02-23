@@ -1,3 +1,7 @@
+`*args` must come before `**kwargs`
+
+
+
 `*args` and `**kwargs` are special syntaxes used in function definitions to allow a function to accept a variable number of arguments.
 
 1. `*args` (Arbitrary Positional Arguments)
@@ -10,6 +14,10 @@
 
 Positional Arguments are values passed to a function based on their order or position in the function call. The first argument in the call corresponds to the first parameter defined in the function and so on.
 It determines which values are assigned to which parameter.
+
+args collects extra positional arguments into a tuple.
+`*kwargs` collects extra keyword arguments into a dict.
+
 
 ```python
 def greet(name, message):
@@ -38,3 +46,8 @@ print_info(product="Laptop", price=1200)
 
 - The double asterisks (`**`) are crucial; they signify that the parameter will collect keyword arguments into a dictionary.
 
+
+# Unpacking with `*` and `**`
+
+
+The symbol are used to unpack values when `*calling functions.*`

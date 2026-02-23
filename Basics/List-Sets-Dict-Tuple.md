@@ -16,6 +16,10 @@ List can hold elements of any data type.
 - reverse() -> Reverses the order of the list
 - sort() -> Sorts the list
 
+- `insert() - thisList(2, "watermelon")` - doesnot remove the one already present just appends at that position
+-  pop takes index `(thisList.pop(1))` but del does `del thisList[1] `
+- 
+
 ## Using Type Hints:
 
  ```python

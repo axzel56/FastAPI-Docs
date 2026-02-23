@@ -10,11 +10,12 @@ Event Loop task is to look at the the stack and look at the task queue, if the s
 
 How it works.
 
-- - The server creates coroutine tasks and registers them with the event loop.
+-  The server creates coroutine tasks and registers them with the event loop.
 - The event loop executes a coroutine until it hits `await`.
 - At `await`, the coroutine yields control, and the event loop registers the I/O operation with the OS.
 - The OS monitors the I/O and notifies the event loop when it is ready.
 - The event loop resumes the paused coroutine.
+
 # Why not use Multithread
 Python(`CPython`) has things like `Global Interpreter Lock (GIL)`.
 
@@ -69,7 +70,7 @@ Concept: Each task either needs to complete or explicitly yield control to other
 
 # Round Robin:
 Its a preemptive scheduling technique used in OS and Networking to provide fair CPU access to all processes.
-It assigns a fixed, equal time slice- time quantunm to each task in a circular, FIFO order
+It assigns a fixed, equal time slice- time quantumn to each task in a circular, FIFO order
 
 **How It Works:**
 

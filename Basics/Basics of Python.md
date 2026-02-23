@@ -218,3 +218,32 @@ print(isinstance(x, int))  # Output: True
 print(isinstance(x, str))  # Output: False
 ```
 
+
+## Operators
+
+- Walrus Operator `:=`
+		Allows to assign values to variables within a larger expression, combining assignment and evaluation in a single statement to make code more concise and efficient.
+
+		It assigns the value on the RHS to the variable in 
+		LHS and also returns the assigned value. 
+
+		Different from traditional assignment operator which
+		assigns the value but not return it.
+		
+  ```python
+  inputs = []
+  while (current := input("Write something")) != "quit":
+	  inputs.append(current)
+  ```
+
+
+```python 
+{url : requests.get(url).content for url in urls if requests.get(url).status_code == 200}
+
+## - using walrus
+{url : r.content for url in urls if (r := requests.get(url)).status_code == 200}
+```
+
+- is: Returns true if both the variables *points to the same object*.
+		`==` checks if the values of both variables are equal.
+		`is` checks if both variables point to the same object in memory.
